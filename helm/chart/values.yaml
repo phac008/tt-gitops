@@ -1,0 +1,3 @@
+fullnameOverride: tt
+image:
+  repository: quay.io/rbaumgar/monitor-demo-app-jvm

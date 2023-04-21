@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "tt"
+  description: "tt"
+  tags:
+    - sx
+    - template
+  links:
+    - url: https://graf-sx-grafana.apps.cluster1.mcp.pitagora.at/d/KRlE7mE4z/4-golden-signals-sx-cnp?orgId=1&var-namespace=suxess-it-dev&var-workload=All&var-service=tt
+      title: Grafana SRE Metrics
+      icon: web
+  annotations:
+    github.com/project-slug: phac008/tt-gitops
+    backstage.io/kubernetes-id: tt
+    argocd/app-name: tt-qa
+    backstage.io/kubernetes-namespace: suxess-it-qa
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: service
+  lifecycle: experimental
+  owner: "guests"
+  system: system:tt

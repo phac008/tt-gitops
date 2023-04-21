@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: tt-ingress
+  namespace: suxess-it-qa
+  labels:
+    app: tt
+    backstage.io/kubernetes-id: tt
+spec:
+  rules:
+  - host: tt-suxess-it-qa.apps.cluster1.mcp.pitagora.at
+    http:
+      paths:
+      - backend:
+          service:
+            name: tt
+            port:
+              number: 8080
+        path: /
+        pathType: Prefix

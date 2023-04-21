@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tt
+  namespace: suxess-it-qa
+  labels:
+    app: tt
+    backstage.io/kubernetes-id: tt
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tt
+  template:
+    metadata:
+      labels:
+        app: tt
+        backstage.io/kubernetes-id: tt
+    spec:
+      containers:
+#      - image: quay.io/rbaumgar/monitor-demo-app-jvm
+      - image: quay.io/rbaumgar/monitor-demo-app-jvm
+        imagePullPolicy: Always
+        name: tt
